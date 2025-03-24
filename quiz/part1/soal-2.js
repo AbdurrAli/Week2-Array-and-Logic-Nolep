@@ -13,55 +13,52 @@ function dataHandling2(input) {
     let birthday = input[3];
     let month = "";
 
-    for (let i = 0; i < birthday.length; i++) {
-        // if birthday format like this dd/mm/yyyy
-        if (birthday.length === 10) {
-            month = birthday.substring(3, 5);
-            // if birthday format like this d/mm/yyyy
-        } else if (birthday.length === 9) {
-            month = birthday.substring(2, 4);
-        }
+    if (birthday.length === 10) {
+        month = birthday.substring(3, 5);
+        // if birthday format like this d/mm/yyyy
+    } else if (birthday.length === 9) {
+        month = birthday.substring(2, 4);
+    }
 
-        // switch condition
-        switch (month) {
-            case "01":
-                month = "January";
-                break;
-            case "02":
-                month = "February";
-                break;
-            case "03":
-                month = "March";
-                break;
-            case "04":
-                month = "April";
-                break;
-            case "05":
-                month = "Mei";
-                break;
-            case "06":
-                month = "June";
-                break;
-            case "07":
-                month = "July";
-                break;
-            case "08":
-                month = "August";
-                break;
-            case "09":
-                month = "September";
-                break;
-            case "10":
-                month = "October";
-                break;
-            case "11":
-                month = "November";
-                break;
-            case "12":
-                month = "December";
-                break;
-            default:
-        }
+    // switch condition
+    switch (month) {
+        case "01":
+            month = "January";
+            break;
+        case "02":
+            month = "February";
+            break;
+        case "03":
+            month = "March";
+            break;
+        case "04":
+            month = "April";
+            break;
+        case "05":
+            month = "May";
+            break;
+        case "06":
+            month = "June";
+            break;
+        case "07":
+            month = "July";
+            break;
+        case "08":
+            month = "August";
+            break;
+        case "09":
+            month = "September";
+            break;
+        case "10":
+            month = "October";
+            break;
+        case "11":
+            month = "November";
+            break;
+        case "12":
+            month = "December";
+            break;
+        default:
     }
     console.log(month);
 
